@@ -1,0 +1,228 @@
+/* =============================================
+   RESPONSIVE — Phase 4
+   Breakpoints: lg ≤ 1024 | md ≤ 768 | sm ≤ 480
+   ============================================= */
+
+/* ---- Large (≤ 1024px) ---- */
+@media (max-width: 1024px) {
+  :root {
+    --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .hero__top {
+    grid-template-columns: 1fr auto;
+    gap: var(--sp-6);
+  }
+
+  .hero__avatar-col {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .hero__avatar-bubble {
+    width: 140px;
+    height: 140px;
+  }
+
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience__header {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .experience-row {
+    grid-template-columns: 140px 1fr auto;
+  }
+}
+
+/* ---- Medium (≤ 768px) ---- */
+@media (max-width: 768px) {
+  :root {
+    --sp-24: 4rem;
+  }
+
+  /* Nav */
+  .nav__links { display: none; }
+  .nav__cta .availability { display: none; }
+  .nav__cta .btn--outline { display: none; }
+  .nav__hamburger { display: flex; }
+
+  /* Hero */
+  .hero__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
+  }
+
+  .hero__avatar-col {
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  .hero__avatar-bubble {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0;
+  }
+
+  .hero__right {
+    align-items: flex-start;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .hero__bio { text-align: left; }
+  .hero__actions { justify-content: flex-start; }
+
+  .hero__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__scroll-hint { display: none; }
+
+  /* Works */
+  .works__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works__grid .card:first-child {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works__grid .card:first-child .card__image-wrap {
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .about__image-wrap {
+    aspect-ratio: 1 / 1;
+    max-width: 360px;
+  }
+
+  /* Skills */
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  /* Process */
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Experience */
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-2);
+  }
+  .experience-row__link { display: none; }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Blog */
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FAQ */
+  .faq__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Section headers */
+  .section-header--split {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .works__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Grid overrides */
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Small (≤ 480px) ---- */
+@media (max-width: 480px) {
+  :root {
+    --sp-24: 3rem;
+    --container-pad: 1.25rem;
+  }
+
+  .hero__stats {
+    gap: var(--sp-6);
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: var(--sp-3) var(--sp-5);
+    font-size: var(--fs-xs);
+  }
+
+  h2, .h2 {
+    font-size: var(--fs-2xl);
+  }
+
+  h3, .h3 {
+    font-size: var(--fs-xl);
+  }
+
+  .section-header__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero__headline {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+}
+
+/* ---- Motion / Reduce-motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

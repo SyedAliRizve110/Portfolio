@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Mohd Ali Rizvi — Full Stack Software Engineer specializing in .NET Core, Angular, Microservices, and scalable system architecture."
+  />
+  <title>Mohd Ali Rizvi · Full Stack Software Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Phase 1 — Foundation -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+
+  <!-- Phase 2 — Components & Nav -->
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Phase 3 — Sections -->
+  <link rel="stylesheet" href="css/sections.css" />
+
+  <!-- Phase 4 — Animations & Responsive -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+  />
+</head>
+<body>
+
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header role="banner">
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a href="#hero" class="nav__logo" aria-label="Mohd Ali Rizvi — Home">
+        Mohd Ali<span>.</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#works"      class="nav__link" data-nav>Projects</a></li>
+        <li><a href="#about"      class="nav__link" data-nav>About</a></li>
+        <li><a href="#skills"     class="nav__link" data-nav>Skills</a></li>
+        <li><a href="#process"    class="nav__link" data-nav>Architecture</a></li>
+        <li><a href="#experience" class="nav__link" data-nav>Experience</a></li>
+        <li><a href="#blog"       class="nav__link" data-nav>Insights</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <span class="availability" aria-label="Currently available for hire">
+          <span class="availability__dot" aria-hidden="true"></span>
+          Available for Hire
+        </span>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+
+        <!-- Hamburger -->
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobileDrawer"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <nav
+      class="nav__drawer"
+      id="mobileDrawer"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <a href="#works"      class="nav__link" data-drawer-link>Projects</a>
+      <a href="#about"      class="nav__link" data-drawer-link>About</a>
+      <a href="#skills"     class="nav__link" data-drawer-link>Skills</a>
+      <a href="#process"    class="nav__link" data-drawer-link>Architecture</a>
+      <a href="#experience" class="nav__link" data-drawer-link>Experience</a>
+      <a href="#blog"       class="nav__link" data-drawer-link>Insights</a>
+      <a href="assets/resume.pdf" class="btn btn--outline" target="_blank" download="Mohd_Ali_Rizvi_Resume.pdf" style="margin-top:0.5rem;" data-drawer-link>Download Resume 📄</a>
+      <a href="#contact"    class="btn btn--primary" style="margin-top:0.5rem;" data-drawer-link>Get in Touch →</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="section section--hero hero" id="hero" aria-label="Hero">
+      <div class="container">
+
+        <div class="hero__top">
+          <div class="hero__left">
+            <div class="hero__eyebrow animate-fade-up">
+              <span class="label">✦ Full Stack Software Engineer</span>
+              <span class="tag">ASP.NET Core · Angular · Microservices</span>
+            </div>
+            <h1 class="hero__headline animate-fade-up animate-fade-up--delay-1">
+              Engineering <em>resilient</em> systems &amp; modern web apps.
+            </h1>
+          </div>
+
+          <!-- Avatar placed in natural layout flow to prevent any overlap on desktop -->
+          <div class="hero__avatar-col animate-fade-up animate-fade-up--delay-2">
+            <div class="hero__avatar-bubble">
+              <img
+                src="assets/images/profile.jpg"
+                alt="Mohd Ali Rizvi — Full Stack Software Engineer"
+                width="240"
+                height="240"
+              />
+            </div>
+          </div>
+
+          <aside class="hero__right animate-fade-up animate-fade-up--delay-3">
+            <p class="hero__bio">
+              Hi, I'm <strong>Mohd Ali Rizvi</strong> — a Full Stack Software Engineer with hands-on expertise building
+              scalable RESTful APIs, high-performance microservices, and component-driven Angular applications.
+            </p>
+            <div class="hero__actions">
+              <a href="#works" class="btn btn--primary">
+                View Projects <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a
+                href="assets/resume.pdf"
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener"
+                download="Mohd_Ali_Rizvi_Resume.pdf"
+                title="Download Mohd Ali Rizvi's Resume"
+              >
+                📄 Download Resume
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero__bottom animate-fade-up animate-fade-up--delay-3">
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="hero__stat-value counter" data-target="98" aria-label="98 percent test accuracy">98%</div>
+              <div class="hero__stat-label">Model Accuracy</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-value counter" data-target="39" aria-label="39 thousand articles processed">39k+</div>
+              <div class="hero__stat-label">NLP Records Analyzed</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-value counter" data-target="100" aria-label="100 percent clean code standard">100%</div>
+              <div class="hero__stat-label">Architecture Driven</div>
+            </div>
+          </div>
+
+          <div class="hero__scroll-hint" aria-hidden="true">
+            <div class="hero__scroll-line"></div>
+            Scroll
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MARQUEE TICKER
+         ============================================================ -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item"><span class="marquee-item__dot"></span>.NET Core 8.0</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Angular</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Microservices</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>ASP.NET Web API</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>SQL Server &amp; PostgreSQL</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>RabbitMQ Message Broker</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Domain-Driven Design (DDD)</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Docker</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Entity Framework Core</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Python &amp; Machine Learning</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>API Gateway</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>RESTful Services</span>
+        <!-- Duplicated items for smooth infinite loop -->
+        <span class="marquee-item"><span class="marquee-item__dot"></span>.NET Core 8.0</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Angular</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Microservices</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>ASP.NET Web API</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>SQL Server &amp; PostgreSQL</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>RabbitMQ Message Broker</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Domain-Driven Design (DDD)</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Docker</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Entity Framework Core</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>Python &amp; Machine Learning</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>API Gateway</span>
+        <span class="marquee-item"><span class="marquee-item__dot"></span>RESTful Services</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         FEATURED PROJECTS / WORKS
+         ============================================================ -->
+    <section class="section" id="works" aria-label="Featured Projects">
+      <div class="container">
+
+        <div class="section-header section-header--split reveal">
+          <div>
+            <p class="label section-header__eyebrow">✦ Portfolio &amp; Code</p>
+            <h2 class="section-header__title">Featured Projects</h2>
+            <p class="section-header__desc">
+              Production implementations and architectural solutions spanning microservices,
+              enterprise monoliths, and machine learning pipelines.
+            </p>
+          </div>
+          <a
+            href="https://github.com/SyedAliRizve110"
+            class="btn btn--outline"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub Profile →
+          </a>
+        </div>
+
+        <!-- Filter tags -->
+        <div class="works__filter stagger" role="group" aria-label="Filter projects by category">
+          <button class="tag is-active" data-filter="all">All</button>
+          <button class="tag" data-filter="fullstack">Full Stack</button>
+          <button class="tag" data-filter="microservices">Microservices</button>
+          <button class="tag" data-filter="ml">Machine Learning</button>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="works__grid stagger" id="worksGrid">
+
+          <!-- Featured Project 1: Employee Management System -->
+          <article class="card" data-category="fullstack" aria-label="Employee Management System Project">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                alt="Employee Management System Dashboard"
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">.NET Core 8.0</span>
+                <span class="tag">Angular</span>
+                <span class="tag">RabbitMQ</span>
+                <span class="tag">JWT Auth</span>
+                <span class="tag">SendGrid</span>
+              </div>
+              <h3 class="card__title">Employee Management &amp; HR System</h3>
+              <p class="text-sm text-muted">
+                Enterprise-grade application built with a robust .NET Core monolithic backend and
+                component-based Angular frontend. Features multi-role authentication (Employee, HR, Admin),
+                customizable workflows, asynchronous event notifications via RabbitMQ, and automated email dispatching through SendGrid.
+              </p>
+              <div class="card__footer">
+                <span class="card__number">01 / ENTERPRISE SYSTEM</span>
+                <a
+                  href="https://github.com/SyedAliRizve110"
+                  class="btn btn--primary"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View Employee Management System details"
+                >
+                  Inspect Code →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Trip Booking & Travel Management System -->
+          <article class="card" data-category="microservices" aria-label="Trip Booking and Travel Management System">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80"
+                alt="Travel Management Microservices Architecture"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">Microservices</span>
+                <span class="tag">API Gateway</span>
+                <span class="tag">.NET Core</span>
+                <span class="tag">RabbitMQ</span>
+              </div>
+              <h3 class="card__title">Trip Booking &amp; Travel Management System</h3>
+              <p class="text-sm text-muted">
+                Engineered a distributed microservices ecosystem utilizing an API Gateway pattern.
+                Developed decoupled services including an Authentication Service, Media Service, and Notification Service,
+                orchestrating asynchronous inter-service communication with RabbitMQ.
+              </p>
+              <div class="card__footer">
+                <span class="card__number">02 / DISTRIBUTED ARCHITECTURE</span>
+                <a
+                  href="https://github.com/SyedAliRizve110"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Architecture →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Fake News Detection System -->
+          <article class="card" data-category="ml" aria-label="Fake News Detection NLP System">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80"
+                alt="Machine Learning NLP Pipeline Data Visualizations"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">98% Accuracy</span>
+              </div>
+              <h3 class="card__title">Fake News Detection &amp; NLP Pipeline</h3>
+              <p class="text-sm text-muted">
+                Engineered an end-to-end NLP classification pipeline trained on a dataset of 39,000+ news articles.
+                Benchmarked multiple algorithms (SVM, XGBoost, Logistic Regression) to deliver a production-ready model
+                with 98% test accuracy, 95%+ precision, and sub-second inference latency.
+              </p>
+              <div class="card__footer">
+                <span class="card__number">03 / MACHINE LEARNING</span>
+                <a
+                  href="https://github.com/SyedAliRizve110/Fake-News-Prediction-System"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="View Fake News Detection repository on GitHub"
+                >
+                  GitHub Repo →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: High-Performance Enterprise APIs & Query Optimization -->
+          <article class="card" data-category="fullstack" aria-label="Enterprise RESTful API Engineering">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+                alt="Cloud Database Server and API Architecture"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">Optimization</span>
+              </div>
+              <h3 class="card__title">Scalable RESTful APIs &amp; Query Optimization</h3>
+              <p class="text-sm text-muted">
+                Designed and deployed high-throughput backend APIs at Taazaa Tech. Optimized complex SQL queries
+                and indexed database execution plans, slashing endpoint latency and establishing robust data integrity.
+              </p>
+              <div class="card__footer">
+                <span class="card__number">04 / BACKEND PERFORMANCE</span>
+                <a href="#skills" class="btn btn--outline">Tech Stack →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT ME
+         ============================================================ -->
+    <section class="section" id="about" aria-label="About Mohd Ali Rizvi">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__image-wrap reveal">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Mohd Ali Rizvi"
+              loading="lazy"
+              width="600"
+              height="800"
+            />
+            <div class="about__badge">
+              <span class="about__badge-icon">🎓</span>
+              <div>
+                <div class="about__badge-value">B.Tech / B.CS</div>
+                <div class="about__badge-label">AKTU, Prayagraj (2019-2022)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__content reveal">
+            <div>
+              <p class="label section-header__eyebrow">✦ Profile</p>
+              <h2 class="about__headline">
+                I build software with <em class="serif">architectural rigor</em>,<br/>
+                clean code &amp; peak performance.
+              </h2>
+            </div>
+
+            <p class="about__body">
+              I am a <strong>Full Stack Software Engineer</strong> based in Prayagraj, India. My core strengths lie in
+              backend development with <strong>ASP.NET Core</strong>, frontend web engineering with <strong>Angular</strong>,
+              and architecting distributed microservices and domain-driven systems.
+            </p>
+
+            <p class="about__body">
+              During my work at <strong>Taazaa Tech Pvt. Ltd. (Noida)</strong>, I engineered high-volume RESTful APIs,
+              integrated API Gateways for microservices workflows, and fine-tuned database queries to minimize API latency.
+              I treat software craftsmanship with disciplined problem solving, maintainability, and thorough testing.
+            </p>
+
+            <div class="flex gap-4" style="flex-wrap:wrap;">
+              <div>
+                <div class="hero__stat-value">.NET &amp; Angular</div>
+                <div class="hero__stat-label">Core Technical Stack</div>
+              </div>
+              <div>
+                <div class="hero__stat-value">Prayagraj</div>
+                <div class="hero__stat-label">Base · Open to Remote/Hybrid</div>
+              </div>
+              <div>
+                <div class="hero__stat-value">3</div>
+                <div class="hero__stat-label">Languages (English, Hindi, Urdu)</div>
+              </div>
+            </div>
+
+            <div class="flex gap-4" style="margin-top: 1rem; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn--primary">
+                Let's Work Together →
+              </a>
+              <a
+                href="assets/resume.pdf"
+                class="btn btn--outline"
+                target="_blank"
+                download="Mohd_Ali_Rizvi_Resume.pdf"
+              >
+                Download Resume 📄
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS & EXPERTISE
+         ============================================================ -->
+    <section class="section" id="skills" aria-label="Skills and Technical Stack">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="label section-header__eyebrow">✦ Capabilities</p>
+          <h2 class="section-header__title">Technical Skills &amp; Proficiencies</h2>
+          <p class="section-header__desc">
+            A comprehensive set of modern backend frameworks, frontend libraries, databases,
+            and architectural patterns.
+          </p>
+        </div>
+
+        <div class="skills__grid stagger">
+
+          <!-- Backend & Architecture -->
+          <div>
+            <p class="skills__category-title">Backend &amp; Architecture</p>
+            <div class="skills__list">
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>ASP.NET Core &amp; .NET Core 8.0</span><span>94%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="94"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Microservices &amp; API Gateway</span><span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>SQL Server, MySQL &amp; PostgreSQL</span><span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Entity Framework Core &amp; LINQ</span><span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="92"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>RabbitMQ &amp; Asynchronous Messaging</span><span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend, Tools & ML -->
+          <div>
+            <p class="skills__category-title">Frontend, ML &amp; DevOps</p>
+            <div class="skills__list">
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Angular &amp; TypeScript</span><span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>RESTful API Design &amp; JWT Security</span><span>94%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="94"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Python &amp; Scikit-Learn (NLP Pipeline)</span><span>82%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="82"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Docker &amp; Containerization</span><span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__header">
+                  <span>Git, Unit Testing &amp; Clean Architecture</span><span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-bar__fill" data-width="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tech stack pill cloud -->
+        <div class="stack-cloud stagger" aria-label="Tools and technologies">
+          <span class="stack-pill">⚡ .NET Core 8.0</span>
+          <span class="stack-pill">🔷 C#</span>
+          <span class="stack-pill">🅰️ Angular</span>
+          <span class="stack-pill">🌐 ASP.NET Web API</span>
+          <span class="stack-pill">🏛️ Microservices</span>
+          <span class="stack-pill">🚪 API Gateway</span>
+          <span class="stack-pill">🐇 RabbitMQ</span>
+          <span class="stack-pill">🗄️ SQL Server</span>
+          <span class="stack-pill">🐘 PostgreSQL</span>
+          <span class="stack-pill">🐬 MySQL</span>
+          <span class="stack-pill">📦 Entity Framework Core</span>
+          <span class="stack-pill">🐳 Docker</span>
+          <span class="stack-pill">🐙 Git &amp; GitHub</span>
+          <span class="stack-pill">🐍 Python</span>
+          <span class="stack-pill">🤖 Scikit-Learn (NLP)</span>
+          <span class="stack-pill">🔐 JWT Auth</span>
+          <span class="stack-pill">📧 SendGrid</span>
+          <span class="stack-pill">🧪 Unit Testing</span>
+          <span class="stack-pill">📐 Domain-Driven Design (DDD)</span>
+          <span class="stack-pill">🧩 Monolithic Architecture</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ENGINEERING PROCESS / ARCHITECTURE
+         ============================================================ -->
+    <section class="section" id="process" aria-label="Engineering Workflow">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="label section-header__eyebrow">✦ Methodology</p>
+          <h2 class="section-header__title">Software Engineering Process</h2>
+          <p class="section-header__desc">
+            A structured approach ensuring high availability, maintainability, and clean code
+            from requirement gathering through deployment.
+          </p>
+        </div>
+
+        <div class="process__grid stagger">
+
+          <div class="process-card">
+            <span class="process-card__number">01</span>
+            <span class="process-card__icon" aria-hidden="true">📐</span>
+            <h3 class="process-card__title">Architect</h3>
+            <p class="process-card__desc">
+              Selecting the appropriate architectural pattern (Microservices, Modular Monolith, or DDD)
+              to align with business scale, performance requirements, and domain boundaries.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-card__number">02</span>
+            <span class="process-card__icon" aria-hidden="true">🗄️</span>
+            <h3 class="process-card__title">Model &amp; Specify</h3>
+            <p class="process-card__desc">
+              Designing normalized database schemas in SQL Server / PostgreSQL and defining RESTful
+              contracts with strict validation, JWT role policies, and error handling.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-card__number">03</span>
+            <span class="process-card__icon" aria-hidden="true">⚡</span>
+            <h3 class="process-card__title">Build &amp; Decouple</h3>
+            <p class="process-card__desc">
+              Implementing clean, SOLID-compliant code in ASP.NET Core, asynchronous messaging via RabbitMQ,
+              and reactive component hierarchies in Angular.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-card__number">04</span>
+            <span class="process-card__icon" aria-hidden="true">🚀</span>
+            <h3 class="process-card__title">Optimize &amp; Ship</h3>
+            <p class="process-card__desc">
+              Conducting query profiling, EF Core query optimization, automated unit testing,
+              and Docker containerization to deliver robust production-ready releases.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE & EDUCATION
+         ============================================================ -->
+    <section class="section" id="experience" aria-label="Work Experience & Education">
+      <div class="container">
+
+        <div class="experience__header reveal">
+          <div>
+            <p class="label section-header__eyebrow">✦ Career &amp; Academic</p>
+            <h2 class="section-header__title">Experience &amp; Education</h2>
+          </div>
+          <p class="section-header__desc text-muted">
+            Proven professional experience in building enterprise software systems alongside
+            formal computer science training.
+          </p>
+        </div>
+
+        <div aria-label="Work and education history">
+
+          <!-- Taazaa Tech Role -->
+          <div class="experience-row reveal">
+            <span class="experience-row__period">04/2022 — 10/2023</span>
+            <div>
+              <div class="experience-row__role">
+                Software Engineer
+                <span class="experience-row__company">Taazaa Tech Pvt. Ltd. — Noida, India</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top: 0.5rem; line-height: 1.6;">
+                • Engineered scalable RESTful APIs using ASP.NET Core and SQL Server, optimizing query performance and reducing API response time.<br />
+                • Architected and deployed microservices-based workflow systems using an API Gateway.<br />
+                • Developed and integrated reactive Angular frontend components.
+              </p>
+            </div>
+            <a href="https://github.com/SyedAliRizve110" class="experience-row__link" target="_blank" rel="noopener">Taazaa Tech →</a>
+          </div>
+
+          <!-- AKTU Education -->
+          <div class="experience-row reveal">
+            <span class="experience-row__period">2019 — 2022</span>
+            <div>
+              <div class="experience-row__role">
+                Bachelor of Computer Science
+                <span class="experience-row__company">Dr. A. P. J. Abdul Kalam Technical University (AKTU) — Prayagraj, India</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top: 0.5rem; line-height: 1.6;">
+                Focused on Data Structures, Algorithms, Software Engineering, Object-Oriented Programming (OOP),
+                Database Management Systems, and Machine Learning.
+              </p>
+            </div>
+            <span class="experience-row__link" style="cursor: default;">Graduated</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CORE STRENGTHS / PHILOSOPHY
+         ============================================================ -->
+    <section class="section" id="testimonials" aria-label="Core Engineering Strengths">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="label section-header__eyebrow">✦ Philosophy</p>
+          <h2 class="section-header__title">Core Strengths &amp; Engineering Values</h2>
+        </div>
+
+        <div class="testimonials__grid stagger">
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              Problem-Solving &amp; Analytical Thinking: Breaking down complex system requirements into modular,
+              resilient microservice components that are straightforward to reason about and evolve.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="about__badge-icon" style="font-size: 2rem;">💡</div>
+              <div class="testimonial-card__meta">
+                <div class="testimonial-card__name">Analytical Approach</div>
+                <div class="testimonial-card__role">System Decomposition</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              Clean, Maintainable Code: Prioritizing Domain-Driven Design, SOLID principles, and clean separation
+              of concerns so codebases remain readable, testable, and future-proof.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="about__badge-icon" style="font-size: 2rem;">📐</div>
+              <div class="testimonial-card__meta">
+                <div class="testimonial-card__name">Clean Architecture</div>
+                <div class="testimonial-card__role">SOLID &amp; Testability</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-card__quote">
+              Agility &amp; Quick Learning: Enthusiastic about assimilating emerging technologies — whether transitioning
+              to the latest .NET versions or deploying NLP classification pipelines.
+            </p>
+            <div class="testimonial-card__author">
+              <div class="about__badge-icon" style="font-size: 2rem;">🚀</div>
+              <div class="testimonial-card__meta">
+                <div class="testimonial-card__name">Continuous Learning</div>
+                <div class="testimonial-card__role">Adaptability</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECHNICAL INSIGHTS / BLOG
+         ============================================================ -->
+    <section class="section" id="blog" aria-label="Technical Articles & Insights">
+      <div class="container">
+
+        <div class="section-header section-header--split reveal">
+          <div>
+            <p class="label section-header__eyebrow">✦ Writing</p>
+            <h2 class="section-header__title">Technical Insights</h2>
+            <p class="section-header__desc">
+              Articles and engineering notes on modern .NET, system architecture, database optimization, and NLP.
+            </p>
+          </div>
+          <a
+            href="https://github.com/SyedAliRizve110"
+            class="btn btn--outline"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub Articles →
+          </a>
+        </div>
+
+        <div class="blog__grid stagger">
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+                alt="Microservices Architecture with .NET and RabbitMQ"
+                loading="lazy"
+                width="600"
+                height="338"
+              />
+            </div>
+            <div class="blog-card__body">
+              <p class="blog-card__date">Backend Architecture</p>
+              <h3 class="blog-card__title">
+                Architecting Microservices with ASP.NET Core &amp; RabbitMQ
+              </h3>
+              <p class="blog-card__excerpt">
+                How event-driven architecture, API Gateways, and decoupled messaging services create fault-tolerant, scalable backend systems.
+              </p>
+              <a href="https://github.com/SyedAliRizve110" class="btn btn--ghost" style="margin-top: 1rem; padding-left: 0;" target="_blank" rel="noopener">
+                Read overview →
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80"
+                alt="Database Indexing and Performance Optimization"
+                loading="lazy"
+                width="600"
+                height="338"
+              />
+            </div>
+            <div class="blog-card__body">
+              <p class="blog-card__date">Database Engineering</p>
+              <h3 class="blog-card__title">
+                Optimizing SQL Server &amp; Entity Framework Core Query Latency
+              </h3>
+              <p class="blog-card__excerpt">
+                Techniques for query plan analysis, indexing strategies, and avoiding N+1 query pitfalls in enterprise .NET APIs.
+              </p>
+              <a href="https://github.com/SyedAliRizve110" class="btn btn--ghost" style="margin-top: 1rem; padding-left: 0;" target="_blank" rel="noopener">
+                Read overview →
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80"
+                alt="Natural Language Processing and Machine Learning"
+                loading="lazy"
+                width="600"
+                height="338"
+              />
+            </div>
+            <div class="blog-card__body">
+              <p class="blog-card__date">Machine Learning / NLP</p>
+              <h3 class="blog-card__title">
+                Building an End-to-End Fake News NLP Classifier in Python
+              </h3>
+              <p class="blog-card__excerpt">
+                Data preprocessing, TF-IDF vectorization, model evaluation between SVM, XGBoost, and Logistic Regression with 98% accuracy.
+              </p>
+              <a href="https://github.com/SyedAliRizve110/Fake-News-Prediction-System" class="btn btn--ghost" style="margin-top: 1rem; padding-left: 0;" target="_blank" rel="noopener">
+                View repository →
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section" id="faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <p class="label section-header__eyebrow">✦ Clarifications</p>
+          <h2 class="section-header__title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq__grid">
+
+          <div class="accordion" id="faqLeft" aria-label="FAQ group 1">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                What is your core tech stack?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  My primary backend stack is ASP.NET Core (.NET Core 8.0, C#), Entity Framework Core, SQL Server,
+                  and RabbitMQ. For frontend engineering, I specialize in Angular with TypeScript. I also build ML/NLP
+                  pipelines using Python (Scikit-Learn, Pandas, NumPy).
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                What architectural paradigms do you specialize in?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  I have production experience in both Microservices (with API Gateway patterns and asynchronous message brokers like RabbitMQ)
+                  and well-structured Monolithic architectures following Domain-Driven Design (DDD) principles.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                Are you available for full-time or contract roles?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  Yes! I am actively open to full-time Software Engineer positions, contract opportunities, and remote or hybrid roles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="faqRight" aria-label="FAQ group 2">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                Where are you located and can you work across time zones?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  I am located in Prayagraj, India (IST, UTC+5:30) and am fully equipped for remote collaboration with flexible overlap
+                  for global engineering teams.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                How do you ensure code quality and performance?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  I emphasize unit testing, query optimization in SQL Server/EF Core to minimize endpoint response times,
+                  rigorous SOLID principles, and clean API contract definitions with JWT authentication and validation.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                How can I review your code or contact you directly?
+                <span class="accordion__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion__panel" role="region">
+                <p class="accordion__content">
+                  You can explore my code on GitHub at <a href="https://github.com/SyedAliRizve110" target="_blank" rel="noopener" style="text-decoration: underline;">github.com/SyedAliRizve110</a>
+                  or reach me via email at <a href="mailto:alirizvi9721@gmail.com" style="text-decoration: underline;">alirizvi9721@gmail.com</a> and phone at <strong>+91 9721974817</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section class="section contact" id="contact" aria-label="Contact Mohd Ali Rizvi">
+      <div class="container">
+        <div class="contact__inner">
+
+          <!-- Left: Contact Details -->
+          <div>
+            <h2 class="contact__headline">
+              Let's engineer something <em>impactful</em> together.
+            </h2>
+            <p class="contact__subtext">
+              Looking for a dedicated software engineer with deep expertise in .NET Core, Angular,
+              and microservices? Let's connect.
+            </p>
+
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; color: rgba(255,255,255,0.85); font-size: var(--fs-sm);">
+              <div>
+                <strong>📧 Email:</strong> <a href="mailto:alirizvi9721@gmail.com" style="color: var(--clr-accent-alt); text-decoration: underline;">alirizvi9721@gmail.com</a>
+              </div>
+              <div>
+                <strong>📱 Phone:</strong> <a href="tel:+919721974817" style="color: var(--clr-accent-alt);">+91 9721974817</a>
+              </div>
+              <div>
+                <strong>📍 Location:</strong> Prayagraj, Uttar Pradesh, India
+              </div>
+              <div>
+                <strong>🐙 GitHub:</strong> <a href="https://github.com/SyedAliRizve110" target="_blank" rel="noopener" style="color: var(--clr-accent-alt); text-decoration: underline;">github.com/SyedAliRizve110</a>
+              </div>
+              <div style="margin-top: 0.5rem;">
+                <a
+                  href="assets/resume.pdf"
+                  class="btn btn--outline"
+                  style="border-color: rgba(255,255,255,0.4); color: #fff;"
+                  target="_blank"
+                  download="Mohd_Ali_Rizvi_Resume.pdf"
+                >
+                  📄 Download Resume (PDF)
+                </a>
+              </div>
+            </div>
+
+            <div class="contact__socials" aria-label="Social media & profile links">
+              <a
+                href="https://github.com/SyedAliRizve110"
+                class="social-link"
+                aria-label="GitHub profile"
+                target="_blank"
+                rel="noopener"
+              >
+                ⌥
+              </a>
+              <a
+                href="mailto:alirizvi9721@gmail.com"
+                class="social-link"
+                aria-label="Send Email"
+              >
+                @
+              </a>
+              <a
+                href="tel:+919721974817"
+                class="social-link"
+                aria-label="Call Mohd Ali Rizvi"
+              >
+                📞
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Contact form -->
+          <form class="contact__form" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label class="form-label" for="name">Your Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@company.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="budget">Opportunity / Project Type</label>
+              <select class="form-input" id="budget" name="budget">
+                <option value="" disabled selected>Select opportunity type…</option>
+                <option value="Full-Time Role">Full-Time Software Engineer Role</option>
+                <option value="Contract / Freelance">Contract / Backend Development</option>
+                <option value="Architecture Consultation">System Architecture Consultation</option>
+                <option value="Other">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                placeholder="Describe the opportunity, technology requirements, or project details..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn--submit" id="submitBtn">
+              Send Message ✦
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="container" role="contentinfo">
+    <div class="footer">
+      <p class="footer__copy">
+        © <span id="year"></span> Mohd Ali Rizvi. Built with precision &amp; modern web standards.
+      </p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#works"   class="footer__link">Projects</a>
+        <a href="#about"   class="footer__link">About</a>
+        <a href="#skills"  class="footer__link">Skills</a>
+        <a href="#experience" class="footer__link">Experience</a>
+        <a href="assets/resume.pdf" class="footer__link" target="_blank" download="Mohd_Ali_Rizvi_Resume.pdf">Resume (PDF)</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Main JS -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

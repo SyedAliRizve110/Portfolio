@@ -1,0 +1,142 @@
+/* =============================================
+   ANIMATIONS & MICRO-INTERACTIONS — Phase 4
+   ============================================= */
+
+/* ---- Cursor trail (optional cosmetic) ---- */
+
+/* ---- Page load fade-in ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s var(--ease-out) both;
+}
+
+.animate-fade-up--delay-1 { animation-delay: 0.1s; }
+.animate-fade-up--delay-2 { animation-delay: 0.2s; }
+.animate-fade-up--delay-3 { animation-delay: 0.35s; }
+.animate-fade-up--delay-4 { animation-delay: 0.5s; }
+
+/* ---- Text clip reveal ---- */
+.clip-reveal {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.clip-reveal > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.clip-reveal.is-visible > span {
+  transform: translateY(0);
+}
+
+/* ---- Hover scale on images ---- */
+.img-hover-scale {
+  overflow: hidden;
+}
+.img-hover-scale img {
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+.img-hover-scale:hover img {
+  transform: scale(1.05);
+}
+
+/* ---- Counter animation ---- */
+.counter[data-target] {
+  display: inline-block;
+}
+
+/* ---- Noise texture overlay ---- */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+/* ---- Back to top button ---- */
+.back-to-top {
+  position: fixed;
+  bottom: var(--sp-8);
+  right: var(--sp-8);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--duration-base) var(--ease-out),
+              transform var(--duration-base) var(--ease-out),
+              background var(--duration-fast);
+  pointer-events: none;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: var(--clr-accent-alt);
+  transform: translateY(-3px);
+}
+
+/* ---- Cursor dot ---- */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  pointer-events: none;
+  z-index: var(--z-modal);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, width 0.3s, height 0.3s, opacity 0.3s;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clr-accent);
+  pointer-events: none;
+  z-index: var(--z-modal);
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s var(--ease-out),
+              width 0.3s var(--ease-out),
+              height 0.3s var(--ease-out),
+              opacity 0.3s;
+  opacity: 0.5;
+}
+
+a:hover ~ .cursor,
+button:hover ~ .cursor { width: 14px; height: 14px; }
+
+@media (hover: none) {
+  .cursor, .cursor-ring { display: none; }
+}

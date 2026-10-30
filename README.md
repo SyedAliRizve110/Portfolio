@@ -1,0 +1,71 @@
+# Mohd Ali Rizvi — Portfolio Website
+
+A personal portfolio website showcasing software engineering projects, system architecture, technical skills, and career experience.
+
+Built with a modular, phase-wise architecture using pure HTML5, CSS3 (Custom Properties / Design Tokens), and Vanilla JavaScript (zero third-party JS runtime dependencies).
+
+---
+
+## ⚡ Tech Stack & Architecture
+
+- **Markup & Styling:** Semantic HTML5, CSS Grid & Flexbox, CSS Variables, Typography & Micro-interactions
+- **Scripting:** Pure Vanilla ES6+ JavaScript (IntersectionObserver for scroll reveal, interactive category filtering, counters, and form validation)
+- **Design Inspiration:** Meeko Creative Portfolio architecture (adapted for Full Stack Software Engineering)
+- **Local Server:** Built-in zero-dependency Node.js HTTP server (`server.js`)
+
+---
+
+## 📁 Project Structure
+
+```
+├── index.html              # Main single-page application
+├── server.js               # Zero-dependency local development server
+├── package.json            # Project metadata & start script
+├── assets/
+│   ├── images/
+│   │   └── profile.jpg     # Profile photograph
+│   └── resume.pdf          # Downloadable resume document
+├── css/
+│   ├── reset.css           # Modern box-sizing & margin reset
+│   ├── variables.css       # Design tokens (colors, typography, spacing)
+│   ├── typography.css      # Font styles & display typography
+│   ├── layout.css          # Container, grid system, and layout utilities
+│   ├── nav.css             # Sticky navigation, glassmorphism blur, mobile drawer
+│   ├── components.css      # Reusable UI components (buttons, cards, tags, accordions)
+│   ├── sections.css        # Hero, Projects, About, Skills, Process, FAQ, Contact
+│   ├── animations.css      # Keyframes, custom cursor, scroll reveals
+│   └── responsive.css      # Responsive media queries (desktop, tablet, mobile)
+└── js/
+    └── main.js             # Core interactive behaviors & observers
+```
+
+---
+
+## 🚀 Getting Started
+
+### Option 1: Direct File
+Simply open `index.html` in any modern web browser.
+
+### Option 2: Local Server (Node.js)
+```bash
+# Start the local server
+npm start
+# or
+node server.js
+```
+Then visit **`http://localhost:3000`** in your browser.
+
+---
+
+## 📬 Contact & Connect
+
+- **Name:** Mohd Ali Rizvi
+- **Email:** [alirizvi9721@gmail.com](mailto:alirizvi9721@gmail.com)
+- **Phone:** +91 9721974817
+- **GitHub:** [https://github.com/SyedAliRizve110](https://github.com/SyedAliRizve110)
+- **Location:** Prayagraj, Uttar Pradesh, India
+
+---
+
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
