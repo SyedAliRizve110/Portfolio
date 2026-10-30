@@ -59,8 +59,6 @@ Simply open `index.html` in any modern web browser.
 ### Option 2: Local Server (Node.js)
 ```bash
 # Start the local server
-npm start
-# or
 node server.js
 ```
 Then visit **`http://localhost:3000`** in your browser.
