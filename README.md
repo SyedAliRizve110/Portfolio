@@ -41,7 +41,17 @@ Built with a modular, phase-wise architecture using pure HTML5, CSS3 (Custom Pro
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started & Deployment
+
+### Deploy to Vercel (1-Click)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSyedAliRizve110%2FPortfolio)
+
+Or connect this repository directly on [Vercel](https://vercel.com/new):
+1. Go to [vercel.com/new](https://vercel.com/new) and log in with your GitHub account.
+2. Select the **Portfolio** repository.
+3. Click **Deploy** — Vercel will automatically build and deploy your site with a free `*.vercel.app` domain and free SSL certificate.
+
+---
 
 ### Option 1: Direct File
 Simply open `index.html` in any modern web browser.
@@ -69,3 +79,4 @@ Then visit **`http://localhost:3000`** in your browser.
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
+

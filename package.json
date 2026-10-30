@@ -4,6 +4,7 @@
   "description": "Personal Portfolio website of Mohd Ali Rizvi — Full Stack Software Engineer",
   "main": "server.js",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "node server.js"
   },
   "keywords": [
