@@ -19,10 +19,10 @@
 }
 
 .nav.is-scrolled {
-  background: rgba(245, 240, 232, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-sm);
+  background: rgba(11, 14, 20, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo */
@@ -148,18 +148,20 @@
   gap: var(--sp-2);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
-  color: #2e7d32;
-  background: #e8f5e9;
-  border: 1px solid #a5d6a7;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
   border-radius: var(--border-radius-pill);
   padding: var(--sp-1) var(--sp-3);
+  letter-spacing: 0.03em;
 }
 
 .availability__dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #4caf50;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
   animation: pulse-dot 2s infinite;
 }
 

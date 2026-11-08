@@ -797,9 +797,9 @@
 
 /* ========== CONTACT / CTA ========== */
 .contact {
-  background: var(--clr-accent);
+  background: #0E121A;
   color: var(--clr-white);
-  border-top: none;
+  border-top: var(--border);
 }
 
 .contact__inner {
@@ -925,8 +925,8 @@ select.form-input option:disabled {
 }
 
 .contact .btn--submit {
-  background: var(--clr-white);
-  color: var(--clr-accent);
+  background: var(--clr-accent);
+  color: var(--clr-white);
   border: none;
   padding: var(--sp-4) var(--sp-8);
   font-weight: var(--fw-bold);
@@ -938,12 +938,13 @@ select.form-input option:disabled {
   align-items: center;
   gap: var(--sp-2);
   align-self: flex-start;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
 }
 .contact .btn--submit:hover {
-  background: var(--clr-accent-alt);
+  background: var(--clr-accent-hover, #4f46e5);
   color: var(--clr-white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
 }
 
 /* ========== FOOTER ========== */

@@ -1,21 +1,24 @@
 /* =============================================
-   DESIGN TOKENS / CSS VARIABLES — Phase 1
+   DESIGN TOKENS / CSS VARIABLES — Deep Obsidian & Electric Indigo
    ============================================= */
 
 :root {
-  /* ---- Colour Palette ---- */
-  --clr-bg:          #F5F0E8;   /* warm off-white / parchment */
-  --clr-surface:     #EDE8DF;   /* card / panel surface */
-  --clr-border:      #D6CFBF;   /* visible borders (Meeko signature) */
-  --clr-text:        #1A1A1A;   /* primary text */
-  --clr-text-muted:  #6B6560;   /* secondary / label text */
-  --clr-accent:      #2D2D2D;   /* dark accent (buttons, pills) */
-  --clr-accent-alt:  #C8A97E;   /* warm gold highlight */
+  /* ---- Colour Palette: Deep Obsidian & Electric Indigo ---- */
+  --clr-bg:          #0B0E14;   /* deep obsidian background */
+  --clr-surface:     #12161F;   /* dark card panel surface */
+  --clr-surface-alt: #171D28;   /* elevated card hover surface */
+  --clr-border:      #1F2736;   /* precision engineered slate border */
+  --clr-border-subtle: rgba(255, 255, 255, 0.08);
+  --clr-text:        #F1F5F9;   /* high-contrast clean ice white */
+  --clr-text-muted:  #94A3B8;   /* balanced secondary slate text */
+  --clr-accent:      #6366F1;   /* electric indigo / .NET purple */
+  --clr-accent-hover:#4F46E5;   /* deep indigo hover */
+  --clr-accent-alt:  #38BDF8;   /* electric cyan highlight */
   --clr-white:       #FFFFFF;
-  --clr-tag-bg:      #E8E2D7;   /* category tag background */
+  --clr-tag-bg:      #17202F;   /* subtle dark indigo pill background */
 
   /* ---- Typography ---- */
-  --font-display:    'Playfair Display', Georgia, serif;
+  --font-display:    'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-body:       'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:       'JetBrains Mono', 'Fira Code', monospace;
 
@@ -67,9 +70,9 @@
   --border:         var(--border-width) solid var(--clr-border);
 
   /* ---- Shadows ---- */
-  --shadow-sm:  0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
-  --shadow-md:  0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg:  0 12px 40px rgba(0,0,0,.12);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md:  0 6px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  --shadow-lg:  0 16px 44px rgba(0,0,0,0.7), 0 0 0 1px rgba(99,102,241,0.25);
 
   /* ---- Transitions ---- */
   --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
