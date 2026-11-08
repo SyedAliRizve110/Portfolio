@@ -134,13 +134,170 @@
   100% { top: 100%; }
 }
 
-/* Avatar bubble in hero center column */
-.hero__avatar-col {
+/* Avatar / Serious Engineer Portrait Card in hero center column */
+.hero__avatar-col,
+.hero__portrait-col {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.engineer-portrait-card {
+  position: relative;
+  width: clamp(210px, 17vw, 255px);
+  border-radius: var(--border-radius-lg);
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09), 0 2px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+
+.engineer-portrait-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14), 0 0 0 1px var(--clr-accent-alt);
+  border-color: var(--clr-accent-alt);
+}
+
+.engineer-portrait-card__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #14171C;
+}
+
+.engineer-portrait-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-out),
+              filter var(--duration-slow) var(--ease-out);
+  filter: contrast(1.04) brightness(1.02);
+}
+
+.engineer-portrait-card:hover .engineer-portrait-card__img {
+  transform: scale(1.03);
+}
+
+/* Subtle dark gradient overlay at top and bottom of portrait frame */
+.engineer-portrait-card__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 16, 20, 0.5) 0%,
+    transparent 28%,
+    transparent 62%,
+    rgba(14, 16, 20, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top status chip */
+.engineer-portrait-card__badge-top {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  padding: 0.35rem 0.65rem;
+  background: rgba(18, 20, 24, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  color: #F5F0E8;
+}
+
+.status-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981; /* emerald active */
+  box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+  animation: pulse-dot 2.5s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.status-text {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+}
+
+.status-tag {
+  color: var(--clr-accent-alt);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+/* Bottom specs HUD */
+.engineer-portrait-card__badge-bottom {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  padding: 0.5rem 0.75rem;
+  background: rgba(18, 20, 24, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.badge-spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.spec-val {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Fallback avatar bubble support */
 .hero__avatar-bubble {
   position: relative;
   width: clamp(170px, 15vw, 230px);
@@ -150,7 +307,6 @@
   overflow: hidden;
   background: var(--clr-surface);
   box-shadow: var(--shadow-md);
-  animation: float 6s ease-in-out infinite;
   flex-shrink: 0;
 }
 
@@ -159,11 +315,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-12px); }
 }
 
 /* ========== MARQUEE / TICKER ========== */
@@ -259,6 +410,146 @@
   border-color: var(--clr-accent);
 }
 
+/* ========== LIVE DEPLOYMENTS SECTION ========== */
+.deployments-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--clr-surface);
+  border: var(--border);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.05em;
+  color: var(--clr-text);
+}
+
+.deployments__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-8);
+}
+
+.deploy-card {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  border: var(--border);
+  background: var(--clr-surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+
+.deploy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-accent-alt);
+}
+
+.deploy-card__preview {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111418;
+}
+
+.deploy-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.deploy-card:hover .deploy-card__preview img {
+  transform: scale(1.04);
+}
+
+.deploy-card__live-chip {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(18, 20, 24, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.deploy-card__body {
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.deploy-card__domain {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--clr-accent-alt);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+
+.deploy-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--sp-3);
+  color: var(--clr-text);
+}
+
+.deploy-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--sp-6);
+  flex-grow: 1;
+}
+
+.deploy-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-6);
+}
+
+.deploy-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--sp-5);
+  border-top: var(--border);
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.deploy-card__url {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--clr-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
 /* ========== ABOUT ========== */
 .about__grid {
   display: grid;
@@ -281,6 +572,32 @@
   height: 100%;
   object-fit: cover;
   object-position: center 15%;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.about__image-wrap:hover img {
+  transform: scale(1.02);
+}
+
+/* Engineering HUD status on top of About photo */
+.about__hud-top {
+  position: absolute;
+  top: var(--sp-4);
+  left: var(--sp-4);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.35rem 0.75rem;
+  background: rgba(18, 20, 24, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #F5F0E8;
 }
 
 /* Floating badge over image */
@@ -543,6 +860,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--sp-5);
+  color-scheme: dark;
 }
 
 .form-group {
@@ -572,6 +890,22 @@
               background var(--duration-fast);
   outline: none;
   width: 100%;
+  color-scheme: dark;
+}
+
+select.form-input {
+  cursor: pointer;
+  appearance: auto;
+}
+
+select.form-input option {
+  background-color: #24262B;
+  color: #FFFFFF;
+  padding: 0.5rem;
+}
+
+select.form-input option:disabled {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .form-input::placeholder,

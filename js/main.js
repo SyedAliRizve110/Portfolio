@@ -60,7 +60,7 @@ function initCursor() {
   animateRing();
 
   // Grow ring on interactive elements
-  const interactiveSelector = 'a, button, [role="button"], .tag, .card, .blog-card';
+  const interactiveSelector = 'a, button, [role="button"], .tag, .card, .blog-card, .deploy-card';
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveSelector)) {
       cursorRing.style.width  = '60px';
@@ -364,21 +364,46 @@ function initContactForm() {
     e.preventDefault();
     if (!validateForm()) return;
 
-    submitBtn.textContent = 'Sending…';
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending Message…';
     submitBtn.disabled    = true;
 
-    // Simulate network delay (replace with real fetch to your endpoint)
-    await new Promise((res) => setTimeout(res, 1500));
+    const formData = new FormData(form);
+    const senderName = $('#name') ? $('#name').value.trim() : 'Visitor';
+    formData.set('subject', `New Portfolio Inquiry from ${senderName}`);
 
-    submitBtn.textContent = '✓ Message Sent!';
-    submitBtn.style.background = '#4caf50';
-    form.reset();
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      const data = await response.json();
 
-    setTimeout(() => {
-      submitBtn.textContent    = 'Send Message ✦';
-      submitBtn.style.background = '';
-      submitBtn.disabled       = false;
-    }, 4000);
+      if (response.status === 200 && data.success) {
+        submitBtn.textContent = '✓ Message Sent Successfully!';
+        submitBtn.style.background = '#10B981';
+        form.reset();
+        setTimeout(() => {
+          submitBtn.textContent      = originalBtnText;
+          submitBtn.style.background = '';
+          submitBtn.disabled         = false;
+        }, 5000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      console.error('Contact form submission error:', err);
+      submitBtn.textContent = '✕ Error Sending. Please Try Again';
+      submitBtn.style.background = '#EF4444';
+      setTimeout(() => {
+        submitBtn.textContent      = originalBtnText;
+        submitBtn.style.background = '';
+        submitBtn.disabled         = false;
+      }, 4000);
+    }
   });
 
   // Live inline validation on blur

@@ -1,16 +1,16 @@
-# Mohd Ali Rizvi — Portfolio Website
+# Mohd Ali Rizvi — .NET Backend & AI Systems Engineer Portfolio
 
-A personal portfolio website showcasing software engineering projects, system architecture, technical skills, and career experience.
+A modern, high-performance portfolio website showcasing production .NET backend architectures, distributed microservices, Generative AI (RAG & Semantic Kernel), technical skills, and career experience.
 
 Built with a modular, phase-wise architecture using pure HTML5, CSS3 (Custom Properties / Design Tokens), and Vanilla JavaScript (zero third-party JS runtime dependencies).
 
 ---
 
-## ⚡ Tech Stack & Architecture
+## ⚡ Tech Stack & Specialization
 
-- **Markup & Styling:** Semantic HTML5, CSS Grid & Flexbox, CSS Variables, Typography & Micro-interactions
+- **Core Specialization:** .NET 9 & C# 13, ASP.NET Core Web API, Distributed Microservices, Generative AI (RAG, Microsoft Semantic Kernel, pgvector, LLMs), SQL Server & PostgreSQL, RabbitMQ, Redis, Docker
+- **Markup & Styling:** Semantic HTML5, CSS Grid & Flexbox, CSS Variables, Modular Architecture, Monospace HUD Badges & Micro-interactions
 - **Scripting:** Pure Vanilla ES6+ JavaScript (IntersectionObserver for scroll reveal, interactive category filtering, counters, and form validation)
-- **Design Inspiration:** Meeko Creative Portfolio architecture (adapted for Full Stack Software Engineering)
 - **Local Server:** Built-in zero-dependency Node.js HTTP server (`server.js`)
 
 ---

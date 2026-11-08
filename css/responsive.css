@@ -14,9 +14,14 @@
     gap: var(--sp-6);
   }
 
-  .hero__avatar-col {
+  .hero__avatar-col,
+  .hero__portrait-col {
     grid-column: 1 / -1;
     justify-content: flex-start;
+  }
+
+  .engineer-portrait-card {
+    width: 210px;
   }
 
   .hero__avatar-bubble {
@@ -65,9 +70,15 @@
     gap: var(--sp-6);
   }
 
-  .hero__avatar-col {
+  .hero__avatar-col,
+  .hero__portrait-col {
     order: -1;
     justify-content: flex-start;
+  }
+
+  .engineer-portrait-card {
+    width: 190px;
+    margin-bottom: var(--sp-2);
   }
 
   .hero__avatar-bubble {
@@ -96,6 +107,10 @@
     grid-template-columns: 1fr;
   }
 
+  .deployments__grid {
+    grid-template-columns: 1fr;
+  }
+
   .works__grid .card:first-child {
     grid-column: 1;
     display: flex;
@@ -114,8 +129,8 @@
   }
 
   .about__image-wrap {
-    aspect-ratio: 1 / 1;
-    max-width: 360px;
+    aspect-ratio: 4 / 5;
+    max-width: 380px;
   }
 
   /* Skills */
